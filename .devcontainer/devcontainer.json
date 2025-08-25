@@ -1,0 +1,32 @@
+{
+  "name": "chessAId Development (Local App/Langserver)",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  // Comment out the postCreateCommand for now
+  // "postCreateCommand": "poetry install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.vscode-typescript",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

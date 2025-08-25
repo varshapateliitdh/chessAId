@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chessAId</title>
+    <!-- Link to Chessboard.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Star-field effect -->
+    <div
+      id="star-field"
+      style="position: fixed; width: 100%; height: 100%; z-index: -1"
+    ></div>
+
+    <div id="main-container" style="display: flex; height: 100vh">
+      <div
+        id="content-container"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 66.66%;
+        "
+      >
+        <h1>chessAId</h1>
+
+        <div id="message"></div>
+
+        <!-- Interactive Chessboard -->
+        <div id="chessboard1" style="width: 400px; height: 400px"></div>
+
+        <!--Score board logic-->
+        <div id="scoreboard">
+          <p>User Score: <span id="user-score">0</span></p>
+          <p>Engine Score: <span id="engine-score">0</span></p>
+        </div>
+
+        <button id="backBtn">Back</button>
+
+        <button id="clearBtn">Clear FEN</button>
+      </div>
+
+      <!-- Chat Container -->
+      <div
+        id="chat-container"
+        style="
+          position: relative;
+          width: 33.33%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0);
+          overflow: auto;
+        "
+      >
+        <ul id="chat-messages"></ul>
+        <form id="chat-form">
+          <input
+            id="chat-input"
+            type="text"
+            placeholder="Type your message here..."
+            style="
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
+        </form>
+      </div>
+    </div>
+
+    <!-- jQuery required for Chessboard.js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chessboard.js Script -->
+    <script
+      src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom script for interaction with Chessboard.js and chat -->
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>

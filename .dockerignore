@@ -1,0 +1,14 @@
+# Exclude Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Exclude OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Exclude test/build artifacts
+dist/
+build/
+*.egg-info/
